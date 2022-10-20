@@ -19,3 +19,4 @@ class User {
 const abc = new User("abc", "abc@abc.com", "poadn");
 const bca = new User("abc", "abc@abc.com", "poadn");
 User.getUsers();
+console.log(abc.email);
