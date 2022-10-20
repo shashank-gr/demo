@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     
+      body {
+        /* background-color: rgb(209, 209, 209); */
+        font-family: Arial, Helvetica, sans-serif;
+       
+      }
+      header{
+        text-align: center;
+      }
+      h2 {
+        color: orange;
+      }
+      form input {
+        width: 500px;
+      }
+      form{
+        width:max-content;
+        margin: auto;
+      }
+      #dateTime {
+        width: 248px;
+      }
+      .centre{
+        display: block;
+        margin: auto;
+        width: 700px;
+        padding: 10px 10px;
+        background-color: #d4d4d4;
+        
+      }
+      .sub {
+        padding: 10px 5px;
+        width: 500px;
+        background-color: orange;
+        color: white;
+        font-size: 24px;
+        border-radius: 5px;
+        border-color: none;
+        text-transform: uppercase;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="centre">
+      <header>
+        <h2>Book a Call</h2>
+    <p>
+      Book a slot and our representative will call you within an hour of
+      selected time.
+    </p>
+      </header>
+    
+    <hr />
+    
+      <form action="#" onsubmit="display(event)" autocomplete="on">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" placeholder="Enter name" required/><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <label for="ph">Phone:</label><br />
+        <input type="tel" id="ph" name="phone" required /><br />
+        <label id="dateTime">Schedule at:</label><br />
+        <input type="date" id="dateTime" name="date" required />
+        <input
+          type="time"
+          id="dateTime"
+          name="time"
+          required
+          min="10:00"
+          max="17:00"
+          title="Between 10AM -5PM"
+        /><br />
+        <br />
+        <input class="sub" type="submit" value="Book a call" />
+      </form>
+    
+    </div>
+    
+    </body>
+    
+    <script>
+      function display(event) {
+        event.preventDefault();
+        // console.log(document.getElementById("name").value);
+        console.log(event.target.email.value);
+        console.log(event.target.phone.value);
+        console.log(event.target.date.value);
+        console.log(event.target.time.value);
+        console.log(event.target);
+      }
+    </script>
+  </body>
+</html>
