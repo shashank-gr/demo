@@ -84,3 +84,5 @@ btn.addEventListener("mouseout", (e) => {
   e.preventDefault();
   f.removeAttribute("style");
 });
+
+console.log("hello");
